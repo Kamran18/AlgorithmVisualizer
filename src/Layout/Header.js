@@ -48,7 +48,7 @@ export default function ButtonAppBar() {
           <div variant="text" color='primary' aria-label="text primary button group">
             <Hidden smDown>
               <Button size="medium" startIcon={<HomeIcon />} className={classes.btnStyles}>
-                <Link to="/" className={classes.linkStyle}>
+                <Link to="/AlgorithmVisualizer" className={classes.linkStyle}>
                   <Typography variant="h6" >
                     HOME
                   </Typography>

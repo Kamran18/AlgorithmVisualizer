@@ -35,7 +35,7 @@ function App() {
           <img src={SvgL} style={wave} alt='Large wave svg'/>
         </Hidden>
         
-        <Route exact path='/' component={Home} />
+        <Route exact path='/AlgorithmVisualizer' component={Home} />
         <Suspense fallback={<div>Routes Loading</div>}>
           <Switch>
             <Route path='/About' component={AboutUs} />
