@@ -1,6 +1,6 @@
 export default function SearchRealizer([animation, nodeValue, N], speed){//N => no of nodes
     //Box styling constants
-    const gColor="#8bc34a", rColor="#f44336", hColor='#00796b',wColor='white',bColor='#03a9f4',
+    const rColor="#f44336", hColor='#00796b',wColor='white',bColor='#03a9f4',
     gTextColor='#9e9e9e',bTextColor="#212121";
     const bar = document.querySelectorAll('.Bar'),
     Head = document.getElementById('Head'),

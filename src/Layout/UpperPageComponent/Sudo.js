@@ -64,7 +64,7 @@ function SudoCode(props){
                     <Grid item key={index} xs={12} >
                         {/* <motion.div variants={frameritem}> */}
                             <Paper elevation={0} 
-                            className={classes.paperStyle, 'paper'}>   
+                            className={classes.paperStyle + ' paper'}>   
                                 <Typography variant="h6" 
                                 className={classes.typoStyle}
                                 style={{textIndent:item[0]}}>

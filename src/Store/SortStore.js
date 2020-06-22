@@ -37,14 +37,14 @@ const Bubble = [[0,`function BUBBLE_SORT (A, N)`],
        ],
 
        Merge = [
-            [0,'0 function MERGE_SORT (A, N)'],
-            [10,'1 if N > 0'], 
-            [50,`2 if N = 1 then return`],
-            [50,`3 A1 <- A[ 0 to N/2 ], N1 = N/2`],
-            [50 ,`4 A2 <- A[ 1+N/2 to N ], N2 = 1+N/2`],
-            [50,`5 MERGE_SORT (A1, N1)`],
-            [50,`6 MERGE_SORT (A2, N2)`],
-            [50 ,`7 Merge (A, A1, N1, A2, N2)`],
+            [0,'function MERGE_SORT (A, N)'],
+            [10,'if N > 0'], 
+            [50,`if N = 1 then return`],
+            [50,`A1 <- A[ 0 to N/2 ], N1 = N/2`],
+            [50 ,`A2 <- A[ 1+N/2 to N ], N2 = 1+N/2`],
+            [50,`MERGE_SORT (A1, N1)`],
+            [50,`MERGE_SORT (A2, N2)`],
+            [50 ,`Merge (A, A1, N1, A2, N2)`],
        ],
 
        Default = [[0,'404']]

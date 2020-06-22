@@ -109,7 +109,7 @@ class BarsContainer extends React.PureComponent{
     }
 
     render(){
-        console.log(this.state,this.props)
+        // console.log(this.state,this.props)
         const {num} = this.state,
         {algoType} = this.props
         return(

@@ -1,7 +1,5 @@
-import Bars from "../../Layout/UpperPageComponent/Bars";
-
 export default function SelectionRealizer([animation, N], speed){
-    let j=0, maxHiglight = 1;
+    let j=0, maxHiglight = true;
     const gColor="#8bc34a", rColor="#f44336", bColor='#64b5f6',
     pColor="#8e24aa",gTextColor='#9e9e9e',bTextColor="#212121";
     const arr = document.querySelectorAll('.Bar')
@@ -9,6 +7,12 @@ export default function SelectionRealizer([animation, N], speed){
     const arrCode= document.querySelectorAll('.paper'),
     shadow = "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
     unshadow ="none"
+
+    //for fixing jsHint error https://stackoverflow.com/questions/58816244/debugging-eslint-warning-function-declared-in-a-loop-contains-unsafe-reference
+    const maxHiglightToggle = () =>{
+        maxHiglight = !maxHiglight
+        return !maxHiglight //old state
+    }
 
     for(let i=0; i<animation.length; i++){
         //at the start make them light
@@ -28,7 +32,7 @@ export default function SelectionRealizer([animation, N], speed){
                 arrCode[5].style.color = gTextColor
                 arrCode[6].style.boxShadow = shadow
                 arrCode[6].style.color = bTextColor
-                maxHiglight = 1;
+                maxHiglightToggle()
             }, i*speed)
         }
         else{ 
@@ -46,10 +50,10 @@ export default function SelectionRealizer([animation, N], speed){
                     arrCode[5].style.color = gTextColor
                     arrCode[6].style.boxShadow = unshadow
                     arrCode[6].style.color = gTextColor
-                    if(maxHiglight){
+                    if(maxHiglightToggle()){
                         arrCode[2].style.boxShadow = shadow
                         arrCode[2].style.color = bTextColor
-                        maxHiglight = 0
+                        maxHiglightToggle()
                     }
                 }, i*speed)
             } 

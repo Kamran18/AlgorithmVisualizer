@@ -3,10 +3,10 @@ export default (num) => {
     const defaultSearchNum = num[Math.floor(Math.random()*num.length)]
     let searchNum = Number(prompt(`Enter the number you want to search. On click "Cancel" random number will be taken`,[defaultSearchNum]))
     searchNum = Number(searchNum) ? searchNum : defaultSearchNum
-    console.log(searchNum)//
+    // console.log(searchNum)//
 
     const Index = num.indexOf(searchNum)
-    console.log(Index,'popo')//
+    // console.log(Index,'popo')//
 
     let AnimationArr = []
     let N = Index

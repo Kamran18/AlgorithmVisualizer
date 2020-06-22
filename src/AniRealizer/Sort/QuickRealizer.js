@@ -6,9 +6,16 @@ export default function QuickRealizer([animation, N], speed){
     const arrCode= document.querySelectorAll('.paper'),
     shadow = "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
     unshadow ="none"
-    let one=1
+    let one=true
     // arrCode[2].style.boxShadow = unshadow
     // arrCode[2].style.color = gTextColor
+
+    //for fixing jsHint error https://stackoverflow.com/questions/58816244/debugging-eslint-warning-function-declared-in-a-loop-contains-unsafe-reference
+    const oneToggle = () => {
+        one = !one
+        return !one //old state
+    }
+
     for(let i=0; i<animation.length; i++){
         //
         for(let k=0; k<10; k++){
@@ -94,15 +101,15 @@ export default function QuickRealizer([animation, N], speed){
         //
         else if(animation[i][0] === 'start'){
             setTimeout(()=>{
-                if(one===1){
+                if(oneToggle()===1){
                     arrCode[1].style.boxShadow = shadow
                     arrCode[1].style.color = bTextColor
-                    one = 0
+                    oneToggle()
                 }
                 else{
                     arrCode[1].style.boxShadow = unshadow
                     arrCode[1].style.color = gTextColor
-                    one = 1 
+                    oneToggle()
                 }
             }, i*speed)
         }
