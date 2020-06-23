@@ -36,7 +36,7 @@ function App() {
         </Hidden>
         
         <Route exact path='/AlgorithmVisualizer' component={Home} />
-        <Suspense fallback={<div>Routes Loading</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route path='/About' component={AboutUs} />
             <Route path='/List/:AlgoId' component={Page} />

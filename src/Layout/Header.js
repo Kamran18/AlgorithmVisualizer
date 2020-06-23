@@ -64,7 +64,7 @@ export default function ButtonAppBar() {
             </Hidden>
             <Hidden smUp>
               <IconButton aria-label='Home'>
-                <Link to="/" className={classes.linkStyle}>
+                <Link to="/AlgorithmVisualizer" className={classes.linkStyle}>
                   <HomeIcon />
                 </Link>
               </IconButton>

@@ -1,5 +1,7 @@
 import React from 'react'
-import {Paper, Grid, Typography} from '@material-ui/core'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 import Card from "./Card"
 import Avatar from '../Images/About/Avatar.png' 
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,7 +12,9 @@ const useStyles = makeStyles(theme=>({
     },
     paperStyle: {
         padding: 50,
-        height: 170
+        margin: '0 10px',
+        minHeight: 190,
+        maxHeight: 220
     },
     cardStyle:{
         maxWidth: 220,
@@ -26,13 +30,13 @@ function About(){
             <Grid item className={classes.cardStyle}>
                 <Card link={'#'} 
                     title={'KAMRAN ASHRAF'}
-                    intro={'REACT DEVELOPER'}
+                    intro={'Full stack developer and React ❤'}
                     imgUrl={Avatar}/>
             </Grid>
             <Grid item xs={12} md={5}>
                 <Paper className={classes.paperStyle}>
                     <Typography>
-                        This project is made for the begineers and visual learners that will help them in 
+                        A simple application made for the beginners and visual learners that will help them in 
                         understanding the working of different algorthims.The source code will be
                         available on request.
                         <br/><br/>
